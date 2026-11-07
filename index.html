@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HH-WRA Demo · Ionity Global</title>
+<meta name="description" content="WhatsApp-Based Digital Risk Assessment Channel for Higher Health - demonstration by Ionity Global (Pty) Ltd.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" href="logo.png">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap">
+<style>
+  :root { --navy: #0a142a; --navy-2: #16223d; --ink: #e9eef7; --muted: #9aa6bb; --teal: #1ea494; --gold: #ffb612; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--navy); color: var(--ink); font-family: Poppins, system-ui, sans-serif; }
+  body { background: radial-gradient(1200px 700px at 25% 30%, var(--navy-2), var(--navy) 70%); min-height: 100vh; display: flex; flex-direction: column; }
+  /* slow glowing line around the edge */
+  .glow { position: fixed; inset: 0; pointer-events: none; padding: 5px; z-index: 0;
+    background: conic-gradient(from var(--a, 0deg), transparent 0 70%, rgba(30,164,148,.35) 80%, rgba(255,182,18,.5) 86%, rgba(0,122,77,.35) 92%, transparent 98%);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor; mask-composite: exclude; animation: run 14s linear infinite; }
+  @property --a { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
+  @keyframes run { to { --a: 360deg; } }
+  .ribbon { height: 6px; background: linear-gradient(90deg, #de3831 0 18%, #ffb612 18% 36%, #007a4d 36% 54%, #1ea494 54% 77%, #eb4b6f 77%); }
+  header { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px clamp(16px, 4vw, 48px); }
+  header img.ion { height: 46px; }
+  header img.hh { height: 34px; background: #fff; padding: 6px 12px; border-radius: 10px; }
+  main { position: relative; z-index: 1; flex: 1; width: 100%; max-width: 1180px; margin: 0 auto; padding: 8px clamp(16px, 4vw, 48px) 40px; }
+  .k { font-size: 13px; letter-spacing: .16em; text-transform: uppercase; color: var(--teal); font-weight: 700; }
+  h1 { font-size: clamp(28px, 4.4vw, 52px); line-height: 1.08; margin: 8px 0 10px; letter-spacing: -.02em; }
+  p.lead { color: var(--muted); font-size: clamp(15px, 1.6vw, 19px); margin: 0 0 22px; max-width: 760px; }
+  .player { border-radius: 18px; overflow: hidden; background: #000; box-shadow: 0 30px 90px rgba(0,0,0,.55), 0 0 0 1px rgba(255,255,255,.08); }
+  video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: #000; }
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+  .chip { font-size: 13px; padding: 6px 12px; border-radius: 999px; background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.14); }
+  footer { position: relative; z-index: 1; padding: 18px clamp(16px, 4vw, 48px) 26px; color: var(--muted); font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px 18px; justify-content: space-between; }
+  footer a { color: var(--ink); text-decoration: none; }
+  @media (max-width: 560px) { header img.ion { height: 36px; } header img.hh { height: 26px; } }
+</style>
+</head>
+<body>
+  <div class="glow"></div>
+  <div class="ribbon"></div>
+  <header>
+    <img class="ion" src="logo.png" alt="Ionity Global">
+  </header>
+  <main>
+    <div class="k">RFP HH-ICT-WRA-2026/01</div>
+    <h1>WhatsApp Risk Assessment Channel</h1>
+    <p class="lead">Built for Higher Health. WhatsApp first, with an optional live web app - no download.</p>
+    <div class="player">
+      <video controls playsinline preload="metadata" poster="poster.jpg">
+        <source src="hh-wra-demo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="chips">
+      <span class="chip">WhatsApp Flows</span><span class="chip">Disability screening + certificate</span><span class="chip">Mind &amp; Learn</span><span class="chip">POPIA</span><span class="chip">Synthetic data only</span>
+    </div>
+  </main>
+  <footer>
+    <span>Ionity Global (Pty) Ltd · 2026/276325/07 · Building Tomorrow, Today.</span>
+    <span><a href="mailto:ai@ionity.today">ai@ionity.today</a> · +27 646 999 877 · <a href="https://www.ionity.today">www.ionity.today</a></span>
+  </footer>
+</body>
+</html>
